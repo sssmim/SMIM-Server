@@ -21,7 +21,11 @@ public class List {
     private Long ie_num;
 
     @Column(nullable = false)
-    private int ie_count;
+    @Temporal(TemporalType.TIME)
+    private Date ie_sec;
+
+    @Column(nullable = false)
+    private int list_ie_count;
 
     @Column(nullable = false)
     @Temporal(TemporalType.TIME)
