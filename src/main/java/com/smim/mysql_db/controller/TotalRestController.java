@@ -2,6 +2,7 @@ package com.smim.mysql_db.controller;
 
 import com.smim.mysql_db.repository.*;
 import com.smim.mysql_db.service.OrganizationService;
+import com.smim.mysql_db.service.TestService;
 import com.smim.mysql_db.table.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,10 @@ public class TotalRestController {
     private final OrganizationRepository organizationRepository;
 
     private final OrganizationService organizationService;
+
+    private final TestRepository testRepository;
+
+    private final TestService testService;
 
     private final GExerciseRepository gExerciseRepository;
 
@@ -49,6 +54,28 @@ public class TotalRestController {
     public Long deleteOrganization(@PathVariable Long group_num) {
         organizationRepository.deleteById(group_num);
         return group_num;
+    }
+
+    @GetMapping("/test")
+    public List<Test> getTest() {
+        return testRepository.findAll();
+    }
+
+    @PostMapping("/test")
+    public Test createTest(@RequestBody TestDto testDto) {
+        Test test = new Test(testDto);
+        return testRepository.save(test);
+    }
+
+    @PutMapping("/test/{test_num}")
+    public Long updateTest(@PathVariable Long test_num, @RequestBody TestDto testDto) {
+        return testService.update(test_num, testDto);
+    }
+
+    @DeleteMapping("/test/{test_num}")
+    public Long deleteTest(@PathVariable Long test_num) {
+        testRepository.deleteById(test_num);
+        return test_num;
     }
 
     @GetMapping("/gexercise")
