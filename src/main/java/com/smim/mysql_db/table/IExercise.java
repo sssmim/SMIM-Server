@@ -24,4 +24,20 @@ public class IExercise {
 
     @Column(nullable = false)
     private String ie_dsec;
+
+    public IExercise(IExerciseDto IExerciseDto) {
+        this.ie_num = IExerciseDto.getIe_num();
+        this.ie_name = IExerciseDto.getIe_name();
+        this.ie_sec = IExerciseDto.getIe_sec();
+        this.ie_dsec = IExerciseDto.getIe_dsec();
+
+
+    }
+
+    public void update(IExerciseDto IExerciseDto) {
+        this.ie_num = IExerciseDto.getIe_num();
+        this.ie_name = IExerciseDto.getIe_name();
+        this.ie_sec = IExerciseDto.getIe_sec();
+        this.ie_dsec = IExerciseDto.getIe_dsec();
+    }
 }
