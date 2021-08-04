@@ -2,7 +2,6 @@ package com.smim.mysql_db.table;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.aspectj.weaver.ast.Or;
 
 import javax.persistence.*;
 
