@@ -17,10 +17,10 @@ public class IExerciseService {
 
     @Transactional
     public Long update(Long ie_num, IExerciseDto iExerciseDto) {
-        IExercise iexercise1 = IExerciseRepository.findById(ie_num).orElseThrow(
+        IExercise iexercise = IExerciseRepository.findById(ie_num).orElseThrow(
                 () -> new IllegalArgumentException("해당 그룹 번호가 존재하지 않습니다.")
         );
-        iexercise1.update(iExerciseDto);
-        return iexercise1.getIe_num();
+        iexercise.update(iExerciseDto);
+        return iexercise.getIe_num();
     }
 }

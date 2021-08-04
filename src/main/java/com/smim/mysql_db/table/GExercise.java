@@ -42,7 +42,6 @@ public class GExercise {
     private String video_url;
 
     public GExercise(GExerciseDto GExerciseDto) {
-        this.ge_num = GExerciseDto.getGe_num();
         this.ge_name = GExerciseDto.getGe_name();
         this.ge_desc = GExerciseDto.getGe_desc();
         this.ge_date = GExerciseDto.getGe_date();
@@ -53,7 +52,6 @@ public class GExercise {
     }
 
     public void update(GExerciseDto GExerciseDto) {
-        this.ge_num = GExerciseDto.getGe_num();
         this.ge_name = GExerciseDto.getGe_name();
         this.ge_desc = GExerciseDto.getGe_desc();
         this.ge_date = GExerciseDto.getGe_date();

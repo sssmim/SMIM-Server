@@ -27,4 +27,18 @@ public class IExercise {
 
     @Column(nullable = true)
     private String ie_image;
+
+    public IExercise(IExerciseDto iExerciseDto) {
+        this.ie_name = iExerciseDto.getIe_name();
+        this.ie_sec = iExerciseDto.getIe_sec();
+        this.ie_dsec = iExerciseDto.getIe_desc();
+        this.ie_image = iExerciseDto.getIe_image();
+    }
+
+    public void update(IExerciseDto iExerciseDto) {
+        this.ie_name = iExerciseDto.getIe_name();
+        this.ie_sec = iExerciseDto.getIe_sec();
+        this.ie_dsec = iExerciseDto.getIe_desc();
+        this.ie_image = iExerciseDto.getIe_image();
+    }
 }
