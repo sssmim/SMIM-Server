@@ -24,4 +24,7 @@ public class IExercise {
 
     @Column(nullable = false)
     private String ie_dsec;
+
+    @Column(nullable = true)
+    private String ie_image;
 }

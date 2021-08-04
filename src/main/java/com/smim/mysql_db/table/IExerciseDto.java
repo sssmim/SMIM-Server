@@ -8,4 +8,5 @@ public class IExerciseDto {
     private String ie_name;
     private String ie_sec;
     private String id_desc;
+    private String ie_image;
 }
