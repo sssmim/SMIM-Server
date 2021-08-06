@@ -20,7 +20,6 @@ public class TotalRestController {
 
     private final OrganizationRepository organizationRepository;
 
-
     private final OrganizationService organizationService;
 
     private final TestRepository testRepository;
@@ -32,6 +31,8 @@ public class TotalRestController {
     private final GExerciseService gExerciseService;
 
     private final IExerciseRepository iExerciseRepository;
+
+
 
     private final IExerciseService iExerciseService;
 

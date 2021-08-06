@@ -9,5 +9,6 @@ public class IExerciseDto {
     private Long ie_num;
     private String ie_name;
     private Date ie_sec;
-    private String ie_dsec;
+    private String ie_desc;
+    private String ie_image;
 }
