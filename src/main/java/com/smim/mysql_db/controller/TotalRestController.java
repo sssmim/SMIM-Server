@@ -32,8 +32,6 @@ public class TotalRestController {
 
     private final IExerciseRepository iExerciseRepository;
 
-
-
     private final IExerciseService iExerciseService;
 
     private final ListRepository listRepository;
