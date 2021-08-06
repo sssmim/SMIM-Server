@@ -15,4 +15,5 @@ public class GExerciseDto {
     private LocalTime ge_end_time;
     private LocalTime ge_run_time;
     private String video_url;
+    private String group_num;
 }

@@ -41,6 +41,9 @@ public class GExercise {
     @Column(nullable = false)
     private String video_url;
 
+    @Column(nullable = false)
+    private String group_num;
+
     public GExercise(GExerciseDto GExerciseDto) {
         this.ge_num = GExerciseDto.getGe_num();
         this.ge_name = GExerciseDto.getGe_name();
@@ -50,6 +53,7 @@ public class GExercise {
         this.ge_end_time = GExerciseDto.getGe_end_time();
         this.ge_run_time = GExerciseDto.getGe_run_time();
         this.video_url = GExerciseDto.getVideo_url();
+        this.group_num = GExerciseDto.getGroup_num();
     }
 
     public void update(GExerciseDto GExerciseDto) {
@@ -61,5 +65,6 @@ public class GExercise {
         this.ge_end_time = GExerciseDto.getGe_end_time();
         this.ge_run_time = GExerciseDto.getGe_run_time();
         this.video_url = GExerciseDto.getVideo_url();
+        this.group_num = GExerciseDto.getGroup_num();
     }
 }
