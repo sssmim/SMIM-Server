@@ -38,7 +38,7 @@ public class GExercise {
     private String video_url;
 
     @Column(nullable = false)
-    private String group_num;
+    private int group_num;
 
     public GExercise(GExerciseDto GExerciseDto) {
         this.ge_desc = GExerciseDto.getGe_desc();
