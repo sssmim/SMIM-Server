@@ -8,7 +8,6 @@ import java.util.Date;
 @Getter
 public class GExerciseDto {
     private Long ge_num;
-    private String ge_name;
     private String ge_desc;
     private Date ge_date;
     private LocalTime ge_start_time;
