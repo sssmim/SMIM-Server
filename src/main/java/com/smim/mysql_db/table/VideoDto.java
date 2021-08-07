@@ -2,10 +2,6 @@ package com.smim.mysql_db.table;
 
 import lombok.Getter;
 
-import javax.persistence.Column;
-import java.time.LocalTime;
-import java.util.Date;
-
 @Getter
 public class VideoDto {
     private Long video_num;
@@ -13,4 +9,3 @@ public class VideoDto {
     private String video_image;
     private String video_url;
 }
-

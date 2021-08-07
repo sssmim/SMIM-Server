@@ -32,19 +32,18 @@ public class GExercise {
     private LocalTime ge_end_time;
 
     @Column(nullable = false)
-//    @Temporal(TemporalType.TIME)
-    private LocalTime ge_run_time;
+    private String video_url;
 
     @Column(nullable = false)
-    private String video_url;
+    private int group_num;
 
     public GExercise(GExerciseDto GExerciseDto) {
         this.ge_desc = GExerciseDto.getGe_desc();
         this.ge_date = GExerciseDto.getGe_date();
         this.ge_start_time = GExerciseDto.getGe_start_time();
         this.ge_end_time = GExerciseDto.getGe_end_time();
-        this.ge_run_time = GExerciseDto.getGe_run_time();
         this.video_url = GExerciseDto.getVideo_url();
+        this.group_num = GExerciseDto.getGroup_num();
     }
 
     public void update(GExerciseDto GExerciseDto) {
@@ -52,7 +51,7 @@ public class GExercise {
         this.ge_date = GExerciseDto.getGe_date();
         this.ge_start_time = GExerciseDto.getGe_start_time();
         this.ge_end_time = GExerciseDto.getGe_end_time();
-        this.ge_run_time = GExerciseDto.getGe_run_time();
         this.video_url = GExerciseDto.getVideo_url();
+        this.group_num = GExerciseDto.getGroup_num();
     }
 }

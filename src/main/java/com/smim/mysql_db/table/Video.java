@@ -4,8 +4,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalTime;
-import java.util.Date;
 
 @Getter
 @NoArgsConstructor
@@ -22,7 +20,7 @@ public class Video {
     @Column(nullable = false)
     private String video_image;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String video_url;
 
     public Video(VideoDto videoDto) {
