@@ -34,8 +34,7 @@ public class TotalRestController {
 
     private final IExerciseService iExerciseService;
 
-    private final ListRepository listRepository;
-
+    private final IElistRepository ielistRepository;
 
     @GetMapping("/personal")
     public List<Personal> getPersonal() {
@@ -131,7 +130,19 @@ public class TotalRestController {
     }
 
     @GetMapping("/list")
-    public List<com.smim.mysql_db.table.List> getList() {
-        return listRepository.findAll();
+    public List<IElist> getList() {
+        return ielistRepository.findAll();
+    }
+
+    @PostMapping("/list")
+    public IElist createList(@RequestBody IElistDto ielistDto) {
+        IElist ielist = new IElist(ielistDto);
+        return ielistRepository.save(ielist);
+    }
+
+    @DeleteMapping("/list/{list_num}")
+    public Long deleteList(@PathVariable Long list_num) {
+        ielistRepository.deleteById(list_num);
+        return list_num;
     }
 }
