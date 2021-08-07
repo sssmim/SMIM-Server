@@ -32,8 +32,6 @@ public class TotalRestController {
 
     private final IExerciseRepository iExerciseRepository;
 
-
-
     private final IExerciseService iExerciseService;
 
     private final VideoRepository videoRepository;
@@ -134,7 +132,12 @@ public class TotalRestController {
     }
 
     @GetMapping("/list")
-    public List<com.smim.mysql_db.table.List> getList() {
-        return listRepository.findAll();
+    public List<IElist> getList() {
+        return ielistRepository.findAll();
+    }
+
+    @GetMapping("/video")
+    public List<Video> getVideo() {
+        return videoRepository.findAll();
     }
 }
