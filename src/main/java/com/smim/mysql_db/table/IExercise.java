@@ -19,8 +19,7 @@ public class IExercise {
     private String ie_name;
 
     @Column(nullable = false)
-    @Temporal(TemporalType.TIME)
-    private Date ie_sec;
+    private String ie_sec;
 
     @Column(nullable = false)
     private String ie_dsec;
