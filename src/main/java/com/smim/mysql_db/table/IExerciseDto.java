@@ -11,4 +11,5 @@ public class IExerciseDto {
     private Date ie_sec;
     private String ie_desc;
     private String ie_image;
+    private String ie_part;
 }

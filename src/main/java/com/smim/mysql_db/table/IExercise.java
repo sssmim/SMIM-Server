@@ -25,6 +25,9 @@ public class IExercise {
     @Column(nullable = false)
     private String ie_dsec;
 
+    @Column(nullable = false)
+    private String ie_part;
+
     @Column(nullable = true)
     private String ie_image;
 
@@ -33,6 +36,7 @@ public class IExercise {
         this.ie_sec = iExerciseDto.getIe_sec();
         this.ie_dsec = iExerciseDto.getIe_desc();
         this.ie_image = iExerciseDto.getIe_image();
+        this.ie_part = iExerciseDto.getIe_part();
     }
 
     public void update(IExerciseDto iExerciseDto) {
@@ -40,5 +44,6 @@ public class IExercise {
         this.ie_sec = iExerciseDto.getIe_sec();
         this.ie_dsec = iExerciseDto.getIe_desc();
         this.ie_image = iExerciseDto.getIe_image();
+        this.ie_part = iExerciseDto.getIe_part();
     }
 }
