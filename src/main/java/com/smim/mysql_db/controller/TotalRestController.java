@@ -142,6 +142,12 @@ public class TotalRestController {
         return ielistRepository.save(ieList);
     }
 
+    @DeleteMapping("/list/{list_num}")
+    public Long deleteList(@PathVariable Long list_num) {
+        ielistRepository.deleteById(list_num);
+        return list_num;
+    }
+
     @GetMapping("/video")
     public List<Video> getVideo() {
         return videoRepository.findAll();
