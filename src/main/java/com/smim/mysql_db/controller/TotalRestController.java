@@ -136,6 +136,12 @@ public class TotalRestController {
         return ielistRepository.findAll();
     }
 
+    @PostMapping("/list")
+    public IElist createList(@RequestBody IElistDto ielistDto) {
+        IElist ieList = new IElist(ielistDto);
+        return ielistRepository.save(ieList);
+    }
+
     @GetMapping("/video")
     public List<Video> getVideo() {
         return videoRepository.findAll();

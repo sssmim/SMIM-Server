@@ -12,13 +12,13 @@ import java.util.Date;
 public class IElistDto {
     private Long list_num;
     private String name1;
-    private int count1;
+    private Integer count1;
     private String name2;
-    private int count2;
+    private Integer count2;
     private String name3;
-    private int count3;
+    private Integer count3;
     private String name4;
-    private int count4;
+    private Integer count4;
     private String name5;
-    private int count5;
+    private Integer count5;
 }

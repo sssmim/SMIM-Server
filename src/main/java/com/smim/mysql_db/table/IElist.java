@@ -18,31 +18,31 @@ public class IElist {
     private String name1;
 
     @Column(nullable = false)
-    private int count1;
+    private Integer count1;
 
-    @Column(nullable = true)
+    @Column
     private String name2;
 
-    @Column(nullable = true)
-    private int count2;
+    @Column
+    private Integer count2;
 
-    @Column(nullable = true)
+    @Column
     private String name3;
 
-    @Column(nullable = true)
-    private int count3;
+    @Column
+    private Integer count3;
 
-    @Column(nullable = true)
+    @Column
     private String name4;
 
-    @Column(nullable = true)
-    private int count4;
+    @Column
+    private Integer count4;
 
-    @Column(nullable = true)
+    @Column
     private String name5;
 
-    @Column(nullable = true)
-    private int count5;
+    @Column
+    private Integer count5;
 
     public IElist(IElistDto ielistDto) {
         this.name1 = ielistDto.getName1();
