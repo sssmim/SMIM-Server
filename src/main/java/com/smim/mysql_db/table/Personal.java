@@ -27,10 +27,32 @@ public class Personal {
     @Column(nullable = true)
     private String interest;
 
-    @Column(nullable = false)
-    @Temporal(TemporalType.DATE)
-    private Date daily_record;
+    @Column(nullable = true)
+    private String daily_record;
 
-    @Temporal(TemporalType.TIME)
-    private Date daily_total;
+    @Column(nullable = true)
+    private String daily_total;
+
+    @Column(nullable = true)
+    private Integer group_num;
+
+    public Personal(PersonalDto personalDto) {
+        this.id = personalDto.getId();
+        this.pwd = personalDto.getPwd();
+        this.personal_image = personalDto.getPersonal_image();
+        this.interest = personalDto.getInterest();
+        this.daily_record = personalDto.getDaily_record();
+        this.daily_total = personalDto.getDaily_total();
+        this.group_num = personalDto.getGroup_num();
+    }
+
+    public void update(PersonalDto personalDto) {
+        this.id = personalDto.getId();
+        this.pwd = personalDto.getPwd();
+        this.personal_image = personalDto.getPersonal_image();
+        this.interest = personalDto.getInterest();
+        this.daily_record = personalDto.getDaily_record();
+        this.daily_total = personalDto.getDaily_total();
+        this.group_num = personalDto.getGroup_num();
+    }
 }

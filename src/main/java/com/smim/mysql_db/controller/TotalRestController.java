@@ -1,10 +1,7 @@
 package com.smim.mysql_db.controller;
 
 import com.smim.mysql_db.repository.*;
-import com.smim.mysql_db.service.GExerciseService;
-import com.smim.mysql_db.service.IExerciseService;
-import com.smim.mysql_db.service.OrganizationService;
-import com.smim.mysql_db.service.TestService;
+import com.smim.mysql_db.service.*;
 import com.smim.mysql_db.table.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +14,8 @@ import java.util.List;
 public class TotalRestController {
 
     private final PersonalRepository personalRepository;
+
+    private final PersonalService personalService;
 
     private final OrganizationRepository organizationRepository;
 
@@ -41,6 +40,23 @@ public class TotalRestController {
     @GetMapping("/personal")
     public List<Personal> getPersonal() {
         return personalRepository.findAll();
+    }
+
+    @PostMapping("/personal")
+    public Personal createPersonal(@RequestBody PersonalDto personalDto) {
+        Personal personal = new Personal(personalDto);
+        return personalRepository.save(personal);
+    }
+
+    @PutMapping("/personal/{mem_num}")
+    public Long updatePersonal(@PathVariable Long mem_num, @RequestBody PersonalDto personalDto) {
+        return personalService.update(mem_num, personalDto);
+    }
+
+    @DeleteMapping("/personal/{mem_num}")
+    public Long deletePersonal(@PathVariable Long mem_num) {
+        personalRepository.deleteById(mem_num);
+        return mem_num;
     }
 
     @GetMapping("/organization")
