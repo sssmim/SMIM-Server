@@ -37,6 +37,20 @@ public class TotalRestController {
 
     private final IElistRepository ielistRepository;
 
+    private final ReservationRepository reservationRespository;
+
+    @GetMapping("/reservation")
+    public List<Reservation> getReservation() {
+        return reservationRespository.findAll();
+    }
+
+    @PostMapping("/reservation")
+    public Reservation createReservation(@RequestBody ReservationDto reservationDto) {
+        Reservation reservation = new Reservation(reservationDto);
+        return reservationRespository.save(reservation);
+    }
+
+
     @GetMapping("/personal")
     public List<Personal> getPersonal() {
         return personalRepository.findAll();
