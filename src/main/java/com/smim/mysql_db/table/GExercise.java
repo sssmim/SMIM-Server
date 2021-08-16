@@ -24,11 +24,9 @@ public class GExercise {
     private Date ge_date;
 
     @Column(nullable = false)
-    //@Temporal(TemporalType.TIME)
     private LocalTime ge_start_time;
 
     @Column(nullable = false)
- //   @Temporal(TemporalType.TIME)
     private LocalTime ge_end_time;
 
     @Column(nullable = false)

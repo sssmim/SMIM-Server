@@ -39,6 +39,10 @@ public class TotalRestController {
 
     private final ReservationRepository reservationRespository;
 
+    private final IEtimeRepository ietimeRepository;
+
+    private final IEtimeService ietimeService;
+
     @GetMapping("/reservation")
     public List<Reservation> getReservation() {
         return reservationRespository.findAll();
@@ -181,5 +185,27 @@ public class TotalRestController {
     @GetMapping("/video")
     public List<Video> getVideo() {
         return videoRepository.findAll();
+    }
+
+    @GetMapping("/ietime")
+    public List<IEtime> getIEtime() {
+        return ietimeRepository.findAll();
+    }
+
+    @PostMapping("/ietime")
+    public IEtime createIEtime(@RequestBody IEtimeDto ietimeDto) {
+        IEtime ietime = new IEtime(ietimeDto);
+        return ietimeRepository.save(ietime);
+    }
+
+    @PutMapping("/ietime/{iet_num}")
+    public Long updateIEtime(@PathVariable Long iet_num, @RequestBody IEtimeDto ietimeDto) {
+        return ietimeService.update(iet_num, ietimeDto);
+    }
+
+    @DeleteMapping("/ietime/{iet_num}")
+    public Long deleteIEtime(@PathVariable Long iet_num) {
+        ietimeRepository.deleteById(iet_num);
+        return iet_num;
     }
 }

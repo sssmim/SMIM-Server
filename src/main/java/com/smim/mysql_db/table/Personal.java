@@ -28,22 +28,18 @@ public class Personal {
     private String interest;
 
     @Column(nullable = true)
-    private String daily_record;
-
-    @Column(nullable = true)
-    private String daily_total;
-
-    @Column(nullable = true)
     private Integer group_num;
+
+    @Column(nullable = true)
+    private Integer point;
 
     public Personal(PersonalDto personalDto) {
         this.id = personalDto.getId();
         this.pwd = personalDto.getPwd();
         this.personal_image = personalDto.getPersonal_image();
         this.interest = personalDto.getInterest();
-        this.daily_record = personalDto.getDaily_record();
-        this.daily_total = personalDto.getDaily_total();
         this.group_num = personalDto.getGroup_num();
+        this.point = personalDto.getPoint();
     }
 
     public void update(PersonalDto personalDto) {
@@ -51,8 +47,7 @@ public class Personal {
         this.pwd = personalDto.getPwd();
         this.personal_image = personalDto.getPersonal_image();
         this.interest = personalDto.getInterest();
-        this.daily_record = personalDto.getDaily_record();
-        this.daily_total = personalDto.getDaily_total();
         this.group_num = personalDto.getGroup_num();
+        this.point = personalDto.getPoint();
     }
 }

@@ -11,7 +11,6 @@ public class PersonalDto {
     private String pwd;
     private String personal_image;
     private String interest;
-    private String daily_record;
-    private String daily_total;
     private Integer group_num;
+    private Integer point;
 }
