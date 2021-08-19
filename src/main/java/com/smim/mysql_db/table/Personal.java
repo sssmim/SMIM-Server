@@ -21,8 +21,8 @@ public class Personal {
     @Column(nullable = false)
     private String pwd;
 
-    @Column(nullable = true)
-    private String personal_image;
+    @Column(nullable = false)
+    private String name;
 
     @Column(nullable = true)
     private String interest;
@@ -36,7 +36,7 @@ public class Personal {
     public Personal(PersonalDto personalDto) {
         this.id = personalDto.getId();
         this.pwd = personalDto.getPwd();
-        this.personal_image = personalDto.getPersonal_image();
+        this.name = personalDto.getName();
         this.interest = personalDto.getInterest();
         this.group_num = personalDto.getGroup_num();
         this.point = personalDto.getPoint();
@@ -45,7 +45,7 @@ public class Personal {
     public void update(PersonalDto personalDto) {
         this.id = personalDto.getId();
         this.pwd = personalDto.getPwd();
-        this.personal_image = personalDto.getPersonal_image();
+        this.name = personalDto.getName();
         this.interest = personalDto.getInterest();
         this.group_num = personalDto.getGroup_num();
         this.point = personalDto.getPoint();

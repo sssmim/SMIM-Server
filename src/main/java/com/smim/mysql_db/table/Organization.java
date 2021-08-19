@@ -24,9 +24,6 @@ public class Organization {
     private String group_category;
 
     @Column(nullable = true)
-    private String group_image;
-
-    @Column(nullable = true)
     private int view_count;
 
     @Column(nullable = true)
@@ -36,7 +33,6 @@ public class Organization {
         this.group_name = organizationDto.getGroup_name();
         this.group_desc = organizationDto.getGroup_desc();
         this.group_category = organizationDto.getGroup_category();
-        this.group_image = organizationDto.getGroup_image();
         this.view_count = organizationDto.getView_count();
         this.authority = organizationDto.getAuthority();
     }
@@ -45,7 +41,6 @@ public class Organization {
         this.group_name = organizationDto.getGroup_name();
         this.group_desc = organizationDto.getGroup_desc();
         this.group_category = organizationDto.getGroup_category();
-        this.group_image = organizationDto.getGroup_image();
         this.view_count = organizationDto.getView_count();
         this.authority = organizationDto.getAuthority();
     }

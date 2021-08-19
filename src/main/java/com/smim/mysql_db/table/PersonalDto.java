@@ -9,7 +9,7 @@ public class PersonalDto {
     private Long mem_num;
     private String id;
     private String pwd;
-    private String personal_image;
+    private String name;
     private String interest;
     private Integer group_num;
     private Integer point;
