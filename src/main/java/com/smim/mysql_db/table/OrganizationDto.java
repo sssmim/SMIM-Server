@@ -8,6 +8,4 @@ public class OrganizationDto {
     private String group_name;
     private String group_desc;
     private String group_category;
-    private int view_count;
-    private int authority;
 }

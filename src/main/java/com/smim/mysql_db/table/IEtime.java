@@ -27,14 +27,12 @@ public class IEtime {
     private LocalTime daily_total;
 
     public IEtime(IEtimeDto ietimeDto) {
-        this.iet_num = ietimeDto.getIet_num();
         this.p_num = ietimeDto.getP_num();
         this.daily_record = ietimeDto.getDaily_record();
         this.daily_total = ietimeDto.getDaily_total();
     }
 
     public void update(IEtimeDto ietimeDto) {
-        this.iet_num = ietimeDto.getIet_num();
         this.p_num = ietimeDto.getP_num();
         this.daily_record = ietimeDto.getDaily_record();
         this.daily_total = ietimeDto.getDaily_total();

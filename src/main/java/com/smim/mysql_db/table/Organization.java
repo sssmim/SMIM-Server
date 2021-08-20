@@ -23,25 +23,15 @@ public class Organization {
     @Column(nullable = false)
     private String group_category;
 
-    @Column(nullable = true)
-    private int view_count;
-
-    @Column(nullable = true)
-    private int authority;
-
     public Organization(OrganizationDto organizationDto) {
         this.group_name = organizationDto.getGroup_name();
         this.group_desc = organizationDto.getGroup_desc();
         this.group_category = organizationDto.getGroup_category();
-        this.view_count = organizationDto.getView_count();
-        this.authority = organizationDto.getAuthority();
     }
 
     public void update(OrganizationDto organizationDto) {
         this.group_name = organizationDto.getGroup_name();
         this.group_desc = organizationDto.getGroup_desc();
         this.group_category = organizationDto.getGroup_category();
-        this.view_count = organizationDto.getView_count();
-        this.authority = organizationDto.getAuthority();
     }
 }
