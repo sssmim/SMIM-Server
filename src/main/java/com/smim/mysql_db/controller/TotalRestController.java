@@ -39,6 +39,32 @@ public class TotalRestController {
 
     private final IEtimeService ietimeService;
 
+    private final BoardRepository boardRepository;
+
+    private final CommentRepository commentRepository;
+
+    @GetMapping("/comment")
+    public List<Comment> getComment() {
+        return commentRepository.findAll();
+    }
+
+    @PostMapping("/comment")
+    public Comment createComment(@RequestBody CommentDto commentDto) {
+        Comment comment = new Comment(commentDto);
+        return commentRepository.save(comment);
+    }
+
+    @GetMapping("/board")
+    public List<Board> getBoard() {
+        return boardRepository.findAll();
+    }
+
+    @PostMapping("/board")
+    public Board createBoard(@RequestBody BoardDto boardDto) {
+        Board board = new Board(boardDto);
+        return boardRepository.save(board);
+    }
+
     @GetMapping("/reservation")
     public List<Reservation> getReservation() {
         return reservationRespository.findAll();
@@ -49,7 +75,6 @@ public class TotalRestController {
         Reservation reservation = new Reservation(reservationDto);
         return reservationRespository.save(reservation);
     }
-
 
     @GetMapping("/personal")
     public List<Personal> getPersonal() {
