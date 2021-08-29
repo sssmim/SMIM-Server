@@ -9,5 +9,5 @@ public class CommentDto {
     private Long comment_id;
     private Long p_num;
     private Long board_num;
-    private String subText;
+    private String sub;
 }

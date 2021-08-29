@@ -8,5 +8,5 @@ public class BoardDto {
     private Long group_num;
     private Long p_num;
     private String title;
-    private String mainText;
+    private String main;
 }

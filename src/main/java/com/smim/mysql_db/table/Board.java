@@ -25,19 +25,19 @@ public class Board {
     private String title;
 
     @Column(nullable = false)
-    private String mainText;
+    private String main;
 
     public Board(BoardDto boardDto) {
         this.group_num = boardDto.getGroup_num();
         this.p_num = boardDto.getP_num();
         this.title = boardDto.getTitle();
-        this.mainText = boardDto.getMainText();
+        this.main = boardDto.getMain();
     }
 
     public void update(BoardDto boardDto) {
         this.group_num = boardDto.getGroup_num();
         this.p_num = boardDto.getP_num();
         this.title = boardDto.getTitle();
-        this.mainText = boardDto.getMainText();
+        this.main = boardDto.getMain();
     }
 }

@@ -21,17 +21,17 @@ public class Comment {
     private Long board_num;
 
     @Column(nullable = false)
-    private String subText;
+    private String sub;
 
     public Comment(CommentDto commentDto) {
         this.p_num = commentDto.getP_num();
         this.board_num = commentDto.getBoard_num();
-        this.subText = commentDto.getSubText();
+        this.sub = commentDto.getSub();
     }
 
     public void update(CommentDto commentDto) {
         this.p_num = commentDto.getP_num();
         this.board_num = commentDto.getBoard_num();
-        this.subText = commentDto.getSubText();
+        this.sub = commentDto.getSub();
     }
 }
