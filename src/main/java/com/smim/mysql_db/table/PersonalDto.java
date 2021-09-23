@@ -13,4 +13,6 @@ public class PersonalDto {
     private String interest;
     private Integer group_num;
     private Integer point;
+    private String question;
+    private String answer;
 }

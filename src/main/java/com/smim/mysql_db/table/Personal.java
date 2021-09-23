@@ -33,6 +33,12 @@ public class Personal {
     @Column(nullable = true)
     private Integer point;
 
+    @Column(nullable = false)
+    private String question;
+
+    @Column(nullable = false)
+    private String answer;
+
     public Personal(PersonalDto personalDto) {
         this.id = personalDto.getId();
         this.pwd = personalDto.getPwd();
@@ -40,6 +46,8 @@ public class Personal {
         this.interest = personalDto.getInterest();
         this.group_num = personalDto.getGroup_num();
         this.point = personalDto.getPoint();
+        this.question = personalDto.getQuestion();
+        this.answer = personalDto.getAnswer();
     }
 
     public void update(PersonalDto personalDto) {
@@ -49,5 +57,7 @@ public class Personal {
         this.interest = personalDto.getInterest();
         this.group_num = personalDto.getGroup_num();
         this.point = personalDto.getPoint();
+        this.question = personalDto.getQuestion();
+        this.answer = personalDto.getAnswer();
     }
 }
