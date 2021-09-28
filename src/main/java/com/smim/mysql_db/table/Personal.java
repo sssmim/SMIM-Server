@@ -39,6 +39,9 @@ public class Personal {
     @Column(nullable = false)
     private String answer;
 
+    @Column(nullable = true)
+    private Integer grade;
+
     public Personal(PersonalDto personalDto) {
         this.id = personalDto.getId();
         this.pwd = personalDto.getPwd();
@@ -48,6 +51,7 @@ public class Personal {
         this.point = personalDto.getPoint();
         this.question = personalDto.getQuestion();
         this.answer = personalDto.getAnswer();
+        this.grade = personalDto.getGrade();
     }
 
     public void update(PersonalDto personalDto) {
@@ -59,5 +63,6 @@ public class Personal {
         this.point = personalDto.getPoint();
         this.question = personalDto.getQuestion();
         this.answer = personalDto.getAnswer();
+        this.grade = personalDto.getGrade();
     }
 }

@@ -15,4 +15,5 @@ public class PersonalDto {
     private Integer point;
     private String question;
     private String answer;
+    private Integer grade;
 }
