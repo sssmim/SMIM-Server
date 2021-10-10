@@ -43,6 +43,10 @@ public class TotalRestController {
 
     private final CommentRepository commentRepository;
 
+    private final ItemRepository itemRepository;
+
+    private final ItemService itemService;
+
     @GetMapping("/comment")
     public List<Comment> getComment() {
         return commentRepository.findAll();
@@ -206,5 +210,27 @@ public class TotalRestController {
     public Long deleteIEtime(@PathVariable Long iet_num) {
         ietimeRepository.deleteById(iet_num);
         return iet_num;
+    }
+
+    @GetMapping("/item")
+    public List<Item> getItem() {
+        return itemRepository.findAll();
+    }
+
+//    @PostMapping("/item")
+//    public Item createItem(@RequestBody ItemDto itemDto) {
+//        Item item = new Item(itemDto);
+//        return itemRepository.save(item);
+//    }
+
+    @PutMapping("/item/{item_num}")
+    public Integer updateItem(@PathVariable Integer item_num, @RequestBody ItemDto itemDto) {
+        return itemService.update(item_num, itemDto);
+    }
+
+    @DeleteMapping("/item/{item_num}")
+    public Integer deleteItem(@PathVariable Integer item_num) {
+        itemRepository.deleteById(item_num);
+        return item_num;
     }
 }
