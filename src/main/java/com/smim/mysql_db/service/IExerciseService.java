@@ -1,9 +1,6 @@
 package com.smim.mysql_db.service;
 
 import com.smim.mysql_db.repository.IExerciseRepository;
-import com.smim.mysql_db.repository.IExerciseRepository;
-import com.smim.mysql_db.repository.IExerciseRepository;
-import com.smim.mysql_db.repository.IExerciseRepository;
 import com.smim.mysql_db.table.*;
 import com.smim.mysql_db.table.IExercise;
 import lombok.RequiredArgsConstructor;
