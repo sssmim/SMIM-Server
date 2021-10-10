@@ -13,6 +13,7 @@ public class PersonalDto {
     private String interest;
     private Integer group_num;
     private Integer point;
+    private Integer total_point;
     private String question;
     private String answer;
     private Integer grade;

@@ -30,8 +30,11 @@ public class Personal {
     @Column(nullable = true)
     private Integer group_num;
 
-    @Column(nullable = true)
+    @Column(nullable = false)
     private Integer point;
+
+    @Column(nullable = false)
+    private Integer total_point;
 
     @Column(nullable = false)
     private String question;
@@ -49,6 +52,7 @@ public class Personal {
         this.interest = personalDto.getInterest();
         this.group_num = personalDto.getGroup_num();
         this.point = personalDto.getPoint();
+        this.total_point = personalDto.getTotal_point();
         this.question = personalDto.getQuestion();
         this.answer = personalDto.getAnswer();
         this.grade = personalDto.getGrade();
@@ -61,6 +65,7 @@ public class Personal {
         this.interest = personalDto.getInterest();
         this.group_num = personalDto.getGroup_num();
         this.point = personalDto.getPoint();
+        this.total_point = personalDto.getTotal_point();
         this.question = personalDto.getQuestion();
         this.answer = personalDto.getAnswer();
         this.grade = personalDto.getGrade();
